@@ -1,0 +1,724 @@
+<html lang=en>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coverage Report</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin: 15px;
+            background-color: #eee;
+        }
+        hr {
+            margin: 15px 0px;
+            background-color: transparent;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+        a {
+            color: #2A5DB0;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        a:active {
+            color: black;
+        }
+        a:visited {
+            color: #2A5DB0;
+        }
+        footer {
+            line-height: 1.5;
+        }
+        .progress-coverage {
+            width: 50px;
+        }
+        .unselectable {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 12px;
+        }
+        .collapsible-active, .collapsible:hover {
+            background-color: #555;
+        }
+        .collapsible:after {
+            content: "\002B";
+            color: white;
+            font-weight: bold;
+            float: left;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .collapsible-active:after {
+            content: "\2212";
+        }
+        .collapsible-container {
+            margin-bottom: 5px;
+            max-height: 0;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+        .collapsible-container-content {
+            padding: 15px;
+        }
+        .code-coverage-table {
+            border-collapse: collapse;
+            font-family: "Lucida Console", Monaco, monospace;
+            font-size: 12px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            tab-size: 4;
+            width: 100%;
+        }
+        .row-line-number {
+            width: 10px;
+            text-align: right;
+            padding-right: 3px;
+            color: rgba(0, 0, 0, 0.50);
+        }
+        .row-reverted-status {
+            font-size: 12px;
+            text-align: center;
+            min-width: 10px;
+            background-color: rgba(0, 0, 0, 0.04);
+            color: rgba(0, 0, 0, 0.70);
+            white-space: nowrap;
+        }
+        .row-source {
+            width: 100%;
+            padding-left: 20px;
+        }
+        .row-line-covered {
+            background-color: rgba(23, 255, 0, 0.12);
+            width: min-content;
+        }
+        .row-line-uncovered {
+            background-color: rgba(255, 0, 0, 0.10);
+            width: min-content;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Coverage Report</h1>
+        <hr />
+        <table>
+            <tr><th>Files: </th><td>1</td></tr>
+            <tr><th>Lines: </th><td>22</td></tr>
+            <tr>
+                <th>Covered: </th>
+                <td>
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    3 / 5 (60.0%)
+                    <progress class="progress-coverage" value="60" max="100" style="accent-color: hsl(60, 100%, 60%)"></progress>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <hr />
+
+    
+    
+        
+        
+        
+        
+
+        
+        <button class="collapsible">
+            
+            <span><progress class="progress-coverage" value="60" max="100" style="accent-color: hsl(60, 100%, 60%)"></progress></span>
+            <span>[60%]</span>
+            <span>gas.sol</span>
+        </button>
+        <div class="collapsible-container">
+            <div class="collapsible-container-content">
+            <hr />
+            
+            <table>
+                <tr>
+                    <th>Lines covered: </th>
+                    <td>3 / 5 (60.0%)</td>
+                </tr>
+            </table>
+            <hr />
+            
+            <table class="code-coverage-table">
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">1</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>// SPDX-License-Identifier: MIT</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">2</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>pragma solidity 0.8.19;</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">3</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre></pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">4</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>// Run with medusa fuzz --target gas.sol --deployment-order fuzzIt</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">5</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre></pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">6</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                                <div title="The source line executed without reverting.">√</div>
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre class="row-line-covered">contract fuzzIt {</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">7</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>    error ETHTransferFailed();</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">8</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre></pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">9</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>    function fuzzSafeTransferETH() external payable {</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">10</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                                <div title="The source line executed without reverting.">√</div>
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre class="row-line-covered">        safeTransferETH(msg.sender, msg.value);</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">11</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>    }</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">12</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre></pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">13</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>    function safeTransferETH(address to, uint256 amount) internal {</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">14</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>        assembly {</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">15</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                                <div title="The source line executed without reverting.">√</div>
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre class="row-line-covered">            if iszero(call(gas(), to, amount, gas(), 0x00, gas(), 0x00)) {</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">16</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre class="row-line-uncovered">                mstore(0x00, 0xb12d13eb)</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">17</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre class="row-line-uncovered">                revert(0x1c, 0x04)</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">18</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>            }</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">19</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>        }</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">20</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>    }</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">21</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre>}</pre>
+                            
+                        </td>
+                    </tr>
+                
+                    
+                    <tr>
+                        
+                        <td class="row-line-number unselectable">22</td>
+
+                        
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+                        <td class="row-reverted-status unselectable">
+                            
+                        </td>
+
+                        
+                        
+                        
+                        <td class="row-source">
+                            
+                                    <pre></pre>
+                            
+                        </td>
+                    </tr>
+                
+            </table>
+            </div>
+        </div>
+    
+
+
+<script>
+    
+    const collapsibleHeaders = document.getElementsByClassName("collapsible");
+    let i;
+    for (i = 0; i < collapsibleHeaders.length; i++) {
+        collapsibleHeaders[i].addEventListener("click", function() {
+            this.classList.toggle("collapsible-active");
+            const collapsibleContainer = this.nextElementSibling;
+            if (collapsibleContainer.style.maxHeight){
+                collapsibleContainer.style.maxHeight = null;
+            } else {
+                collapsibleContainer.style.maxHeight = collapsibleContainer.scrollHeight + "px";
+            }
+        });
+    }
+
+    
+    if (collapsibleHeaders.length === 1) {
+        collapsibleHeaders[0].click();
+    }
+</script>
+
+<hr />
+<footer>
+    <center>
+        Report generated by medusa
+        <br />
+        2023-08-22 18:44:16.14429813 &#43;0000 UTC
+        <br />
+        <a href="https://github.com/crytic/medusa">github.com/crytic/medusa</a>
+    </center>
+</footer>
+</body>
+</html>
