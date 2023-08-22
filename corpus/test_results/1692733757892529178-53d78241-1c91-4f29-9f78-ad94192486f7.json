@@ -1,0 +1,23 @@
+[
+ {
+  "call": {
+   "from": "0x0000000000000000000000000000000000020000",
+   "to": "0xa647ff3c36cfab592509e13860ab8c4f28781a66",
+   "nonce": 0,
+   "value": "0x1",
+   "gas": 12500000,
+   "gasPrice": "0x1",
+   "gasFeeCap": "0x0",
+   "gasTipCap": "0x0",
+   "dataAbiValues": {
+    "methodName": "fuzzSafeTransferETH",
+    "inputValues": [
+     "0xF26C2eF2A1f8cfC1aDD51787576091C810f12B77",
+     "4"
+    ]
+   }
+  },
+  "blockNumberDelay": 10,
+  "blockTimestampDelay": 180316
+ }
+]

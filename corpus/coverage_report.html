@@ -123,7 +123,7 @@
         <hr />
         <table>
             <tr><th>Files: </th><td>2</td></tr>
-            <tr><th>Lines: </th><td>445</td></tr>
+            <tr><th>Lines: </th><td>429</td></tr>
             <tr>
                 <th>Covered: </th>
                 <td>
@@ -134,8 +134,8 @@
 
                     
                     
-                    29 / 30 (96.7%)
-                    <progress class="progress-coverage" value="97" max="100" style="accent-color: hsl(97, 100%, 60%)"></progress>
+                    8 / 18 (44.4%)
+                    <progress class="progress-coverage" value="44" max="100" style="accent-color: hsl(44, 100%, 60%)"></progress>
                 </td>
             </tr>
         </table>
@@ -163,7 +163,7 @@
             <table>
                 <tr>
                     <th>Lines covered: </th>
-                    <td>9 / 9 (100.0%)</td>
+                    <td>7 / 7 (100.0%)</td>
                 </tr>
             </table>
             <hr />
@@ -374,7 +374,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>    error ETHTransferFailed();</pre>
+                                    <pre>    function fuzz_SafeTransferETH(address to) external payable {</pre>
                             
                         </td>
                     </tr>
@@ -387,6 +387,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
+                                <div title="The source line executed without reverting.">√</div>
+                            
                         </td>
                         <td class="row-reverted-status unselectable">
                             
@@ -397,7 +399,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre></pre>
+                                    <pre class="row-line-covered">        uint256 amount = msg.value / 2;</pre>
                             
                         </td>
                     </tr>
@@ -410,6 +412,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
+                                <div title="The source line executed without reverting.">√</div>
+                            
                         </td>
                         <td class="row-reverted-status unselectable">
                             
@@ -420,7 +424,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>    function fuzzSafeTransferETH(address to, uint256 amount) external payable {</pre>
+                                    <pre class="row-line-covered">        bool success1;</pre>
                             
                         </td>
                     </tr>
@@ -438,8 +442,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -447,7 +449,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">        uint256 balanceBefore = to.balance;</pre>
+                                    <pre class="row-line-covered">        bool success2;</pre>
                             
                         </td>
                     </tr>
@@ -460,12 +462,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed without reverting.">√</div>
-                            
                         </td>
                         <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed, but was reverted.">⟳</div>
                             
                         </td>
 
@@ -474,7 +472,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">        emit LogUint256(&#34;Balance Before&#34;, balanceBefore);</pre>
+                                    <pre>        assembly {</pre>
                             
                         </td>
                     </tr>
@@ -492,8 +490,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -501,7 +497,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">        safeTransferETH2(to, amount);</pre>
+                                    <pre class="row-line-covered">            success1 := call(gas(), to, amount, gas(), 0x00, gas(), 0x00)</pre>
                             
                         </td>
                     </tr>
@@ -519,8 +515,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -528,7 +522,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">        emit LogUint256(&#34;Balance After&#34;, to.balance);</pre>
+                                    <pre class="row-line-covered">            success2 := call(gas(), to, amount, 0x00, 0x00, 0x00, 0x00)</pre>
                             
                         </td>
                     </tr>
@@ -541,12 +535,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed without reverting.">√</div>
-                            
                         </td>
                         <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed, but was reverted.">⟳</div>
                             
                         </td>
 
@@ -555,7 +545,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">        assertEq(balanceBefore &#43; amount * 2, to.balance, &#34;Balance is not right&#34;);</pre>
+                                    <pre>        }</pre>
                             
                         </td>
                     </tr>
@@ -578,7 +568,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>    }</pre>
+                                    <pre></pre>
                             
                         </td>
                     </tr>
@@ -591,6 +581,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
+                                <div title="The source line executed without reverting.">√</div>
+                            
                         </td>
                         <td class="row-reverted-status unselectable">
                             
@@ -601,7 +593,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre></pre>
+                                    <pre class="row-line-covered">        assertEq(success1, success2, &#34;SafeTransferETH failed&#34;);</pre>
                             
                         </td>
                     </tr>
@@ -624,7 +616,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>    function safeTransferETH(address to, uint256 amount) internal {</pre>
+                                    <pre>    }</pre>
                             
                         </td>
                     </tr>
@@ -647,382 +639,6 @@
                         
                         <td class="row-source">
                             
-                                    <pre>        assembly {</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">21</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>            if iszero(call(gas(), to, amount, gas(), 0x00, gas(), 0x00)) {</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">22</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>                mstore(0x00, 0xb12d13eb)</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">23</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>                revert(0x1c, 0x04)</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">24</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>            }</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">25</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>        }</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">26</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>    }</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">27</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre></pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">28</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>    function safeTransferETH2(address to, uint256 amount) internal {</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">29</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>        assembly {</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">30</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed without reverting.">√</div>
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre class="row-line-covered">            if iszero(call(gas(), to, amount, 0x00, 0x00, 0x00, 0x00)) {</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">31</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre class="row-line-covered">                mstore(0x00, 0xb12d13eb)</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">32</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre class="row-line-covered">                revert(0x1c, 0x04)</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">33</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>            }</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">34</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>        }</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">35</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
-                                    <pre>    }</pre>
-                            
-                        </td>
-                    </tr>
-                
-                    
-                    <tr>
-                        
-                        <td class="row-line-number unselectable">36</td>
-
-                        
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-                        <td class="row-reverted-status unselectable">
-                            
-                        </td>
-
-                        
-                        
-                        
-                        <td class="row-source">
-                            
                                     <pre>}</pre>
                             
                         </td>
@@ -1031,7 +647,7 @@
                     
                     <tr>
                         
-                        <td class="row-line-number unselectable">37</td>
+                        <td class="row-line-number unselectable">21</td>
 
                         
                         <td class="row-reverted-status unselectable">
@@ -1063,8 +679,8 @@
         
         <button class="collapsible">
             
-            <span><progress class="progress-coverage" value="95" max="100" style="accent-color: hsl(95, 100%, 60%)"></progress></span>
-            <span>[95%]</span>
+            <span><progress class="progress-coverage" value="9" max="100" style="accent-color: hsl(9, 100%, 60%)"></progress></span>
+            <span>[9%]</span>
             <span>helper.sol</span>
         </button>
         <div class="collapsible-container">
@@ -1074,7 +690,7 @@
             <table>
                 <tr>
                     <th>Lines covered: </th>
-                    <td>20 / 21 (95.2%)</td>
+                    <td>1 / 11 (9.1%)</td>
                 </tr>
             </table>
             <hr />
@@ -1664,12 +1280,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed without reverting.">√</div>
-                            
                         </td>
                         <td class="row-reverted-status unselectable">
-                            
-                                <div title="The source line executed, but was reverted.">⟳</div>
                             
                         </td>
 
@@ -1678,7 +1290,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">        if (a != b) {</pre>
+                                    <pre>        if (a != b) {</pre>
                             
                         </td>
                     </tr>
@@ -1694,8 +1306,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -1703,7 +1313,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            string memory aStr = PropertiesLibString.toString(a);</pre>
+                                    <pre>            string memory aStr = PropertiesLibString.toString(a);</pre>
                             
                         </td>
                     </tr>
@@ -1719,8 +1329,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -1728,7 +1336,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            string memory bStr = PropertiesLibString.toString(b);</pre>
+                                    <pre>            string memory bStr = PropertiesLibString.toString(b);</pre>
                             
                         </td>
                     </tr>
@@ -1744,8 +1352,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -1753,7 +1359,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            bytes memory assertMsg = abi.encodePacked(&#34;Invalid: &#34;, aStr, &#34;!=&#34;, bStr, &#34;, reason: &#34;, reason);</pre>
+                                    <pre>            bytes memory assertMsg = abi.encodePacked(&#34;Invalid: &#34;, aStr, &#34;!=&#34;, bStr, &#34;, reason: &#34;, reason);</pre>
                             
                         </td>
                     </tr>
@@ -1769,8 +1375,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -1778,7 +1382,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            emit AssertEqFail(string(assertMsg));</pre>
+                                    <pre>            emit AssertEqFail(string(assertMsg));</pre>
                             
                         </td>
                     </tr>
@@ -1794,8 +1398,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -1803,7 +1405,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            assert(false);</pre>
+                                    <pre>            assert(false);</pre>
                             
                         </td>
                     </tr>
@@ -2184,6 +1786,8 @@
                         
                         <td class="row-reverted-status unselectable">
                             
+                                <div title="The source line executed without reverting.">√</div>
+                            
                         </td>
                         <td class="row-reverted-status unselectable">
                             
@@ -2194,7 +1798,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>        if (a != b) {</pre>
+                                    <pre class="row-line-covered">        if (a != b) {</pre>
                             
                         </td>
                     </tr>
@@ -2217,7 +1821,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>            string memory aStr = PropertiesLibString.toString(a);</pre>
+                                    <pre class="row-line-uncovered">            string memory aStr = PropertiesLibString.toString(a);</pre>
                             
                         </td>
                     </tr>
@@ -2240,7 +1844,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>            string memory bStr = PropertiesLibString.toString(b);</pre>
+                                    <pre class="row-line-uncovered">            string memory bStr = PropertiesLibString.toString(b);</pre>
                             
                         </td>
                     </tr>
@@ -2263,7 +1867,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>            bytes memory assertMsg = abi.encodePacked(&#34;Invalid: &#34;, aStr, &#34;!=&#34;, bStr, &#34;, reason: &#34;, reason);</pre>
+                                    <pre class="row-line-uncovered">            bytes memory assertMsg = abi.encodePacked(&#34;Invalid: &#34;, aStr, &#34;!=&#34;, bStr, &#34;, reason: &#34;, reason);</pre>
                             
                         </td>
                     </tr>
@@ -2286,7 +1890,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>            emit AssertEqFail(string(assertMsg));</pre>
+                                    <pre class="row-line-uncovered">            emit AssertEqFail(string(assertMsg));</pre>
                             
                         </td>
                     </tr>
@@ -2309,7 +1913,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>            assert(false);</pre>
+                                    <pre class="row-line-uncovered">            assert(false);</pre>
                             
                         </td>
                     </tr>
@@ -8765,8 +8369,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -8774,7 +8376,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">    function toString(uint256 value) internal pure returns (string memory str) {</pre>
+                                    <pre>    function toString(uint256 value) internal pure returns (string memory str) {</pre>
                             
                         </td>
                     </tr>
@@ -8905,8 +8507,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -8914,7 +8514,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            let newFreeMemoryPointer := add(mload(0x40), 160)</pre>
+                                    <pre>            let newFreeMemoryPointer := add(mload(0x40), 160)</pre>
                             
                         </td>
                     </tr>
@@ -8976,8 +8576,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -8985,7 +8583,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            mstore(0x40, newFreeMemoryPointer)</pre>
+                                    <pre>            mstore(0x40, newFreeMemoryPointer)</pre>
                             
                         </td>
                     </tr>
@@ -9047,8 +8645,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9056,7 +8652,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            str := sub(newFreeMemoryPointer, 32)</pre>
+                                    <pre>            str := sub(newFreeMemoryPointer, 32)</pre>
                             
                         </td>
                     </tr>
@@ -9118,8 +8714,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9127,7 +8721,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            mstore(str, 0)</pre>
+                                    <pre>            mstore(str, 0)</pre>
                             
                         </td>
                     </tr>
@@ -9189,8 +8783,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9198,7 +8790,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            let end := str</pre>
+                                    <pre>            let end := str</pre>
                             
                         </td>
                     </tr>
@@ -9306,8 +8898,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9315,7 +8905,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            for { let temp := value } 1 {} {</pre>
+                                    <pre>            for { let temp := value } 1 {} {</pre>
                             
                         </td>
                     </tr>
@@ -9354,8 +8944,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9363,7 +8951,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">                str := sub(str, 1)</pre>
+                                    <pre>                str := sub(str, 1)</pre>
                             
                         </td>
                     </tr>
@@ -9448,8 +9036,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9457,7 +9043,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">                mstore8(str, add(48, mod(temp, 10)))</pre>
+                                    <pre>                mstore8(str, add(48, mod(temp, 10)))</pre>
                             
                         </td>
                     </tr>
@@ -9519,8 +9105,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9528,7 +9112,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">                temp := div(temp, 10)</pre>
+                                    <pre>                temp := div(temp, 10)</pre>
                             
                         </td>
                     </tr>
@@ -9590,8 +9174,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9599,7 +9181,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">                if iszero(temp) { break }</pre>
+                                    <pre>                if iszero(temp) { break }</pre>
                             
                         </td>
                     </tr>
@@ -9684,8 +9266,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9693,7 +9273,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            let length := sub(end, str)</pre>
+                                    <pre>            let length := sub(end, str)</pre>
                             
                         </td>
                     </tr>
@@ -9755,8 +9335,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9764,7 +9342,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            str := sub(str, 32)</pre>
+                                    <pre>            str := sub(str, 32)</pre>
                             
                         </td>
                     </tr>
@@ -9826,8 +9404,6 @@
                         </td>
                         <td class="row-reverted-status unselectable">
                             
-                                <div title="The source line executed, but was reverted.">⟳</div>
-                            
                         </td>
 
                         
@@ -9835,7 +9411,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre class="row-line-covered">            mstore(str, length)</pre>
+                                    <pre>            mstore(str, length)</pre>
                             
                         </td>
                     </tr>
@@ -10203,7 +9779,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>    function toString(bool b) internal pure returns (string memory str) {</pre>
+                                    <pre class="row-line-uncovered">    function toString(bool b) internal pure returns (string memory str) {</pre>
                             
                         </td>
                     </tr>
@@ -10226,7 +9802,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>        if (b) {</pre>
+                                    <pre class="row-line-uncovered">        if (b) {</pre>
                             
                         </td>
                     </tr>
@@ -10249,7 +9825,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>            return &#34;true&#34;;</pre>
+                                    <pre class="row-line-uncovered">            return &#34;true&#34;;</pre>
                             
                         </td>
                     </tr>
@@ -10318,7 +9894,7 @@
                         
                         <td class="row-source">
                             
-                                    <pre>        return &#34;false&#34;;</pre>
+                                    <pre class="row-line-uncovered">        return &#34;false&#34;;</pre>
                             
                         </td>
                     </tr>
@@ -10540,7 +10116,7 @@
     <center>
         Report generated by medusa
         <br />
-        2023-08-22 19:05:41.421450881 &#43;0000 UTC
+        2023-08-22 20:45:20.473674522 &#43;0000 UTC
         <br />
         <a href="https://github.com/crytic/medusa">github.com/crytic/medusa</a>
     </center>
